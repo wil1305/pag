@@ -1,0 +1,159 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    transition: all 0.8s ease;
+}
+
+body {
+    background: linear-gradient(45deg,#f06291,#fffde7);
+}
+
+.container {
+    /* para que ocupe el ancho y alto de la pagina*/
+    width: 100dvw;
+    height: 100dvh;
+    /* lo hacemos flexible luego lo centramos en columna*/
+    display: flex;
+    align-items:center;
+    /* lo justificamos centrandolo en la fila*/
+    justify-content: center;
+    /* y por si estamos en dispositivo mobil lo hacemos reponsive*/
+    flex-wrap: wrap;
+}
+
+
+/* estilo de calculadora y botones */
+.calculator {
+    position: relative;
+    height: auto;
+    width: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgb(187, 130, 130);
+    background-color: #fff;
+    #display{
+        color: #bcbde6;
+        margin: 0 10px;
+        height: 120px;
+        width: auto;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        font-size: 30px;
+        margin-bottom: 20px;
+        font-weight: 800;
+    }
+    #equal{
+        height: 130px;
+    }    
+    #clear{
+        background-color: #ffd5d8;
+        color: #f09ca1;
+    }
+    .btn-number {
+        background-color: #c3eaff;
+        color: #78c7f1;
+    }
+    .btn-operator {
+        background-color: rgba(241, 91, 174, 0.363);
+        color:rgba(241, 91, 174, 1);
+        font-weight:500;
+    }
+    .btn-equal {
+        background-color: rgb(135, 236, 203);
+        color: rgb(62, 182, 172);
+    }
+    /* * thema dark */
+    &.dark{
+        background-color: #1b1b1b;
+        #display{
+            color:#f8fafb;
+        }
+        #clear{
+            background-color: #4c35aa;
+            color: white;
+        }
+        .btn-number{
+            background-color: #8efda6;
+            color: black;
+        }
+        .btn-operator{
+            background-color: #f0db4f;
+            color: black;
+        }
+        .btn-equal{
+            background-color: orangered;
+            color: #fff;
+        }
+    }
+}
+
+
+/* estilo al boton superior para cambio de tema */
+.theme-toggler  {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1;
+    &::before{
+        content:"";
+        position: absolute;
+        height: 30px;
+        width: 30px;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        background-color: #baa0f7;
+        z-index: -1;
+    }
+}
+
+.theme-toggler.active {
+    &::before {
+        background-color: #eef3ef;
+    }
+}
+
+/* formas y diseño de botones */
+button {
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    border-radius: 30px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+
+.material-symbols-outlined {
+    color:#535050;
+    position: absolute;
+    top: 18px;
+    right: 17px;
+    user-select: none;
+    cursor: pointer;
+    z-index: 2;  
+    &::before{
+        position: absolute;
+        height: 17px;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+    }
+}
+.material-symbols-outlined.active {
+    &::before {
+        background-color: #0ba049;
+    }
+}
+
+

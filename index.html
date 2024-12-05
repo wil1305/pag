@@ -1,1 +1,100 @@
-<h1>Github pages</h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="llaves.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=toggle_off" />
+</head>
+<body>
+    <div class="container">
+        <div class="calculator dark">
+            <span class="material-symbols-outlined active">
+                toggle_off
+            </span>
+            <div class="theme-toggler active">
+                <i class="toggler-icon"></i>
+            </div>
+            <!-- display esta parte es la pantalla -->
+            <div class="display-screem">
+                <div id="display"></div>
+            </div>
+            <div class="buttons">
+                <table>
+                    <tr>
+                        <td>
+                            <button class="btn-operator" id="clear">C</button>
+                        </td>
+                        <td>
+                            <button class="btn-operator" id="/">/</button>
+                        </td>
+                        <td>
+                            <button class="btn-operator" id="*">*</button>
+                        </td>
+                        <td>
+                            <button class="btn-operator" id="backspace"><</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="btn-number" id="7">7</button>
+                        </td>
+                        <td>
+                            <button class="btn-number" id="8">8</button>
+                        </td>
+                        <td>
+                            <button class="btn-number" id="9">9</button>
+                        </td>
+                        <td>
+                            <button class="btn-operator" id="-">-</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="btn-number" id="4">4</button>
+                        </td>
+                        <td>
+                            <button class="btn-number" id="5">5</button>
+                        </td>
+                        <td>
+                            <button class="btn-number" id="6">6</button>
+                        </td>
+                        <td>
+                            <button class="btn-operator" id="+">+</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="btn-number" id="1">1</button>
+                        </td>
+                        <td>
+                            <button class="btn-number" id="2">2</button>
+                        </td>
+                        <td>
+                            <button class="btn-number" id="3">3</button>
+                        </td>
+                        <!-- rowspan es para que el signo (=) ocupe 2 espacios hacia arriba -->
+                        <td rowspan="2">
+                            <button class="btn-equal" id="equal">=</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="btn-operator" id=".">.</button>
+                        </td>
+                        <td>
+                            <button class="btn-number" id="0">0</button>
+                        </td>
+                        <td>
+                            <button class="btn-operator" id="00">00</button>
+                        </td>                        
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
